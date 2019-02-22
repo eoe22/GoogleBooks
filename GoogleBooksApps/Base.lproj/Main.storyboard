@@ -1,26 +1,177 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7D2-e6-7ey">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item 2-->
+        <scene sceneID="GQ2-Bq-uNJ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="drR-ba-Ltq" customClass="FavoritesViewController" customModule="GoogleBooksApps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="3My-pG-vTK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jp8-qB-Elp"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Jov-8K-urg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NqI-dr-OSg">
+                                <rect key="frame" x="16" y="20" width="343" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qM7-9J-bkj">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bookCell" id="CyQ-L0-0Bj" customClass="BookCollectionViewCell" customModule="GoogleBooksApps" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="NqI-dr-OSg" firstAttribute="top" secondItem="3My-pG-vTK" secondAttribute="bottom" id="8Zy-PU-5UB"/>
+                            <constraint firstItem="NqI-dr-OSg" firstAttribute="leading" secondItem="Jov-8K-urg" secondAttribute="leadingMargin" id="KLN-Oe-CsD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NqI-dr-OSg" secondAttribute="trailing" id="ufg-GN-e5S"/>
+                            <constraint firstItem="Jp8-qB-Elp" firstAttribute="top" secondItem="NqI-dr-OSg" secondAttribute="bottom" id="wTL-dG-DTK"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="YSI-fo-QW1" appends="YES" id="R3F-fo-KB6"/>
+                        </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="0bM-IH-9Wa"/>
+                    <connections>
+                        <outlet property="collectionView" destination="NqI-dr-OSg" id="0pp-JG-wvD"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPq-qG-K1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="YSI-fo-QW1">
+                    <connections>
+                        <action selector="removeAsFavorite:" destination="drR-ba-Ltq" id="G7a-ft-Zr1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="336.80000000000001" y="-576.1619190404798"/>
+        </scene>
+        <!--Google Books-->
+        <scene sceneID="FzT-TE-bnf">
+            <objects>
+                <viewController id="w1O-h9-Yhp" customClass="ViewController" customModule="GoogleBooksApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="deQ-mn-rNE"/>
+                        <viewControllerLayoutGuide type="bottom" id="MgG-Sn-e1d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bTR-OO-dNf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search books..." showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gp-K9-gYq">
+                                <rect key="frame" x="16" y="64" width="343" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KD3-7e-qbx">
+                                <rect key="frame" x="16" y="117" width="343" height="493"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xcc-bJ-16I">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bookCell" id="ecp-1f-6SR" customClass="BookCollectionViewCell" customModule="GoogleBooksApps" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="KD3-7e-qbx" firstAttribute="top" secondItem="8gp-K9-gYq" secondAttribute="bottom" constant="9" id="7zL-TB-x9o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KD3-7e-qbx" secondAttribute="trailing" id="K5p-UP-W8L"/>
+                            <constraint firstItem="8gp-K9-gYq" firstAttribute="top" secondItem="deQ-mn-rNE" secondAttribute="bottom" id="KBl-5j-8Kf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8gp-K9-gYq" secondAttribute="trailing" id="SPm-0i-m0X"/>
+                            <constraint firstItem="KD3-7e-qbx" firstAttribute="leading" secondItem="bTR-OO-dNf" secondAttribute="leadingMargin" id="cyM-fr-bzz"/>
+                            <constraint firstItem="8gp-K9-gYq" firstAttribute="leading" secondItem="bTR-OO-dNf" secondAttribute="leadingMargin" id="meb-AS-jY3"/>
+                            <constraint firstItem="MgG-Sn-e1d" firstAttribute="top" secondItem="KD3-7e-qbx" secondAttribute="bottom" constant="8" id="tSd-Ya-cJJ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Jgf-v8-vcU" appends="YES" id="qYf-lS-jXv"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Google Books" id="A3D-1p-cEL"/>
+                    <connections>
+                        <outlet property="collectionView" destination="KD3-7e-qbx" id="e7u-7E-RI3"/>
+                        <outlet property="searchBar" destination="8gp-K9-gYq" id="oRU-Ch-cOe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHJ-TY-oid" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="Jgf-v8-vcU">
+                    <connections>
+                        <action selector="doubleTap:" destination="w1O-h9-Yhp" id="Qzz-K9-zeg"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1276" y="-1230.1349325337333"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fpY-nL-x7y">
+            <objects>
+                <tabBarController id="7D2-e6-7ey" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9P9-v6-X2N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tCn-YM-nbO" kind="relationship" relationship="viewControllers" id="WcC-HE-7p5"/>
+                        <segue destination="drR-ba-Ltq" kind="relationship" relationship="viewControllers" id="PGu-83-5cv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DVu-td-RaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-614" y="-903"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="kC1-5V-bEl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tCn-YM-nbO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="EE3-DH-Byc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dek-QU-XnG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w1O-h9-Yhp" kind="relationship" relationship="rootViewController" id="B3C-Ex-PF9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Juq-mZ-q1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336.80000000000001" y="-1230.1349325337333"/>
         </scene>
     </scenes>
 </document>
