@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     let service = NetworkService()
     let realmService = RealmService()
     let disposeBag = DisposeBag()
+    let intArr = [Int]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
