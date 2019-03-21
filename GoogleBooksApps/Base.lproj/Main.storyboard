@@ -72,7 +72,7 @@
         <!--Google Books-->
         <scene sceneID="FzT-TE-bnf">
             <objects>
-                <viewController id="w1O-h9-Yhp" customClass="ViewController" customModule="GoogleBooksApps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w1O-h9-Yhp" customClass="BooksViewController" customModule="GoogleBooksApps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="deQ-mn-rNE"/>
                         <viewControllerLayoutGuide type="bottom" id="MgG-Sn-e1d"/>

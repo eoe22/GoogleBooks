@@ -7,10 +7,10 @@ target 'GoogleBooksApps' do
   # Pods for GoogleBooksApps
 	
 	pod 'Alamofire', '< 4.5'
-	pod 'Unbox'
-	pod 'RealmSwift'
-	pod 'RxSwift'
-	pod 'RxCocoa'
+	pod 'Unbox', '< 4.0'
+	pod 'RealmSwift', '<3.0'
+	pod 'RxSwift', '3.0'
+	pod 'RxCocoa', '3.0'
 	pod 'SDWebImage'
  
 end

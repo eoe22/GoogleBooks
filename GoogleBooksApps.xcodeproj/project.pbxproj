@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		C3016E1921FD19FA00D833A2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3016E1821FD19FA00D833A2 /* FavoritesViewController.swift */; };
 		C306501821E7962900EDD98D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306501721E7962900EDD98D /* AppDelegate.swift */; };
-		C306501A21E7962900EDD98D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306501921E7962900EDD98D /* ViewController.swift */; };
+		C306501A21E7962900EDD98D /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306501921E7962900EDD98D /* BooksViewController.swift */; };
 		C306501D21E7962900EDD98D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C306501B21E7962900EDD98D /* Main.storyboard */; };
 		C306501F21E7962900EDD98D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C306501E21E7962900EDD98D /* Assets.xcassets */; };
 		C306502221E7962A00EDD98D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C306502021E7962900EDD98D /* LaunchScreen.storyboard */; };
 		C306502A21E796B300EDD98D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306502921E796B300EDD98D /* NetworkService.swift */; };
-		C306502E21EAB9D700EDD98D /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306502D21EAB9D700EDD98D /* Books.swift */; };
+		C306502E21EAB9D700EDD98D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306502D21EAB9D700EDD98D /* Book.swift */; };
 		C306503121EAC90B00EDD98D /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306503021EAC90B00EDD98D /* BooksViewModel.swift */; };
-		C38FE93221F187BE005C97E6 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FE93121F187BE005C97E6 /* RealmRepository.swift */; };
+		C31EADAD22432BBB006F441E /* BookCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31EADAC22432BBB006F441E /* BookCollectionViewCellViewModel.swift */; };
+		C31EADAF2243F3D9006F441E /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31EADAE2243F3D9006F441E /* FavoritesViewModel.swift */; };
 		C38FE93421F187C6005C97E6 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FE93321F187C6005C97E6 /* RealmService.swift */; };
 		C3BA592921ED8E0F00A828A9 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA592721ED8E0F00A828A9 /* BookCollectionViewCell.swift */; };
 		C3BA592A21ED8E0F00A828A9 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BA592821ED8E0F00A828A9 /* BookCollectionViewCell.xib */; };
@@ -26,15 +27,16 @@
 		C3016E1821FD19FA00D833A2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		C306501421E7962900EDD98D /* GoogleBooksApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBooksApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C306501721E7962900EDD98D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C306501921E7962900EDD98D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C306501921E7962900EDD98D /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		C306501C21E7962900EDD98D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C306501E21E7962900EDD98D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C306502121E7962A00EDD98D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C306502321E7962A00EDD98D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C306502921E796B300EDD98D /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		C306502D21EAB9D700EDD98D /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		C306502D21EAB9D700EDD98D /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		C306503021EAC90B00EDD98D /* BooksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
-		C38FE93121F187BE005C97E6 /* RealmRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
+		C31EADAC22432BBB006F441E /* BookCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		C31EADAE2243F3D9006F441E /* FavoritesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		C38FE93321F187C6005C97E6 /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		C3BA592721ED8E0F00A828A9 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3BA592821ED8E0F00A828A9 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -51,19 +53,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F514E99221FA08000383A78 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C3BA592721ED8E0F00A828A9 /* BookCollectionViewCell.swift */,
-				C3BA592821ED8E0F00A828A9 /* BookCollectionViewCell.xib */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		C3016E1D21FFA76F00D833A2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C306501921E7962900EDD98D /* ViewController.swift */,
+				C306501921E7962900EDD98D /* BooksViewController.swift */,
 				C3016E1821FD19FA00D833A2 /* FavoritesViewController.swift */,
 			);
 			name = ViewController;
@@ -88,7 +81,7 @@
 		C306501621E7962900EDD98D /* GoogleBooksApps */ = {
 			isa = PBXGroup;
 			children = (
-				3F514E99221FA08000383A78 /* View */,
+				C31EADAB22432B44006F441E /* BookCollectionCell */,
 				C3016E1D21FFA76F00D833A2 /* ViewController */,
 				C306502F21EAC8FA00EDD98D /* ViewModel */,
 				C306502C21EAB9BA00EDD98D /* Model */,
@@ -114,8 +107,7 @@
 		C306502C21EAB9BA00EDD98D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C38FE93121F187BE005C97E6 /* RealmRepository.swift */,
-				C306502D21EAB9D700EDD98D /* Books.swift */,
+				C306502D21EAB9D700EDD98D /* Book.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -124,8 +116,19 @@
 			isa = PBXGroup;
 			children = (
 				C306503021EAC90B00EDD98D /* BooksViewModel.swift */,
+				C31EADAE2243F3D9006F441E /* FavoritesViewModel.swift */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		C31EADAB22432B44006F441E /* BookCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA592721ED8E0F00A828A9 /* BookCollectionViewCell.swift */,
+				C3BA592821ED8E0F00A828A9 /* BookCollectionViewCell.xib */,
+				C31EADAC22432BBB006F441E /* BookCollectionViewCellViewModel.swift */,
+			);
+			name = BookCollectionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +158,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = C2QJG01SDRJD;
 				TargetAttributes = {
 					C306501321E7962900EDD98D = {
@@ -202,12 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C306502E21EAB9D700EDD98D /* Books.swift in Sources */,
+				C31EADAF2243F3D9006F441E /* FavoritesViewModel.swift in Sources */,
+				C306502E21EAB9D700EDD98D /* Book.swift in Sources */,
+				C31EADAD22432BBB006F441E /* BookCollectionViewCellViewModel.swift in Sources */,
 				C3016E1921FD19FA00D833A2 /* FavoritesViewController.swift in Sources */,
-				C306501A21E7962900EDD98D /* ViewController.swift in Sources */,
+				C306501A21E7962900EDD98D /* BooksViewController.swift in Sources */,
 				C306502A21E796B300EDD98D /* NetworkService.swift in Sources */,
 				C3BA592921ED8E0F00A828A9 /* BookCollectionViewCell.swift in Sources */,
-				C38FE93221F187BE005C97E6 /* RealmRepository.swift in Sources */,
 				C306503121EAC90B00EDD98D /* BooksViewModel.swift in Sources */,
 				C306501821E7962900EDD98D /* AppDelegate.swift in Sources */,
 				C38FE93421F187C6005C97E6 /* RealmService.swift in Sources */,
@@ -245,23 +249,15 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -303,23 +299,15 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -352,9 +340,9 @@
 				DEVELOPMENT_TEAM = UT6B6RAQG4;
 				INFOPLIST_FILE = GoogleBooksApps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GoogleBooksApps;
+				PRODUCT_BUNDLE_IDENTIFIER = swift3.GoogleBooksApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -365,9 +353,9 @@
 				DEVELOPMENT_TEAM = UT6B6RAQG4;
 				INFOPLIST_FILE = GoogleBooksApps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GoogleBooksApps;
+				PRODUCT_BUNDLE_IDENTIFIER = swift3.GoogleBooksApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -11,14 +11,16 @@ import Foundation
 import Alamofire
 import Unbox
 
+
 //MARK: SERVICE
 class NetworkService {
-    typealias CompletionHandler = ([Book]) -> ()
     
     private let baseURL = "https://www.googleapis.com/books/v1/volumes?q="
     
+    typealias CompletionHandler = ([Book]) -> ()
+    
     func searchNetwork(for text: String, completion: @escaping CompletionHandler) {
-        let url = baseURL + text
+        let url = baseURL + text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         Alamofire.request(url).responseJSON() { response in
             guard let value = response.result.value
                 else {
@@ -33,4 +35,5 @@ class NetworkService {
             completion(books)
         }
     }
+    
 }
