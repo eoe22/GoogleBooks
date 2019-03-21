@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+
+class BooksViewModel{
+    
+    var faveBooks = Variable<[Book]>([])
+    
+    let service = NetworkService()
+    let realmService = RealmService()
+    
+    init() {
+    }
+    
+    func search(for text: String){
+        
+    }
+}

@@ -1,19 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BookCollectionViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BookCollectionViewCell" customModule="GoogleBooksApps" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="158" height="219"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="158" height="219"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G0r-UT-8Wq">
+                        <rect key="frame" x="8" y="8" width="160" height="242"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5yT-4y-PHp">
+                                <rect key="frame" x="0.0" y="0.0" width="142" height="155"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poV-EN-9yT">
+                                <rect key="frame" x="0.0" y="155" width="142" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="kzc-sy-fJF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Publisher" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfY-W9-Em8">
+                                <rect key="frame" x="0.0" y="171" width="142" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Z3p-Tn-Mmx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBk-f4-735">
+                                <rect key="frame" x="0.0" y="187" width="142" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="eoD-zT-UQR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
             </view>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="G0r-UT-8Wq" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="5Op-iU-LLB"/>
+                <constraint firstItem="G0r-UT-8Wq" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="6Px-V7-gei"/>
+                <constraint firstItem="G0r-UT-8Wq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" id="GTL-PA-B2G"/>
+                <constraint firstItem="G0r-UT-8Wq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="mmX-eY-Ve9"/>
+            </constraints>
+            <size key="customSize" width="158" height="219"/>
+            <connections>
+                <outlet property="authorLabel" destination="lBk-f4-735" id="tS9-HG-TDF"/>
+                <outlet property="imageView" destination="5yT-4y-PHp" id="gem-MY-WZp"/>
+                <outlet property="publisherLabel" destination="qfY-W9-Em8" id="9Op-JK-vUL"/>
+                <outlet property="titleLabel" destination="poV-EN-9yT" id="IFg-HW-emF"/>
+            </connections>
+            <point key="canvasLocation" x="-82" y="19.5"/>
         </collectionViewCell>
     </objects>
 </document>

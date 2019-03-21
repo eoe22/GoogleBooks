@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3016E1921FD19FA00D833A2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3016E1821FD19FA00D833A2 /* FavoritesViewController.swift */; };
 		C306501821E7962900EDD98D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306501721E7962900EDD98D /* AppDelegate.swift */; };
-		C306501A21E7962900EDD98D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306501921E7962900EDD98D /* ViewController.swift */; };
+		C306501A21E7962900EDD98D /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306501921E7962900EDD98D /* BooksViewController.swift */; };
 		C306501D21E7962900EDD98D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C306501B21E7962900EDD98D /* Main.storyboard */; };
 		C306501F21E7962900EDD98D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C306501E21E7962900EDD98D /* Assets.xcassets */; };
 		C306502221E7962A00EDD98D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C306502021E7962900EDD98D /* LaunchScreen.storyboard */; };
+		C306502A21E796B300EDD98D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306502921E796B300EDD98D /* NetworkService.swift */; };
+		C306502E21EAB9D700EDD98D /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306502D21EAB9D700EDD98D /* Books.swift */; };
+		C306503121EAC90B00EDD98D /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306503021EAC90B00EDD98D /* BooksViewModel.swift */; };
+		C38FE93421F187C6005C97E6 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FE93321F187C6005C97E6 /* RealmService.swift */; };
+		C3BA592921ED8E0F00A828A9 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA592721ED8E0F00A828A9 /* BookCollectionViewCell.swift */; };
+		C3BA592A21ED8E0F00A828A9 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BA592821ED8E0F00A828A9 /* BookCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3016E1821FD19FA00D833A2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		C306501421E7962900EDD98D /* GoogleBooksApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBooksApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C306501721E7962900EDD98D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C306501921E7962900EDD98D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C306501921E7962900EDD98D /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		C306501C21E7962900EDD98D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C306501E21E7962900EDD98D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C306502121E7962A00EDD98D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C306502321E7962A00EDD98D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C306502921E796B300EDD98D /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C306502D21EAB9D700EDD98D /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		C306503021EAC90B00EDD98D /* BooksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
+		C38FE93321F187C6005C97E6 /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		C3BA592721ED8E0F00A828A9 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3BA592821ED8E0F00A828A9 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3016E1D21FFA76F00D833A2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C306501921E7962900EDD98D /* BooksViewController.swift */,
+				C3016E1821FD19FA00D833A2 /* FavoritesViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		C306500B21E7962900EDD98D = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +77,44 @@
 		C306501621E7962900EDD98D /* GoogleBooksApps */ = {
 			isa = PBXGroup;
 			children = (
+				C3016E1D21FFA76F00D833A2 /* ViewController */,
+				C306502F21EAC8FA00EDD98D /* ViewModel */,
+				C306502C21EAB9BA00EDD98D /* Model */,
+				C306502B21E796B700EDD98D /* Services */,
 				C306501721E7962900EDD98D /* AppDelegate.swift */,
-				C306501921E7962900EDD98D /* ViewController.swift */,
 				C306501B21E7962900EDD98D /* Main.storyboard */,
 				C306501E21E7962900EDD98D /* Assets.xcassets */,
 				C306502021E7962900EDD98D /* LaunchScreen.storyboard */,
 				C306502321E7962A00EDD98D /* Info.plist */,
+				C3BA592721ED8E0F00A828A9 /* BookCollectionViewCell.swift */,
+				C3BA592821ED8E0F00A828A9 /* BookCollectionViewCell.xib */,
 			);
 			path = GoogleBooksApps;
+			sourceTree = "<group>";
+		};
+		C306502B21E796B700EDD98D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C38FE93321F187C6005C97E6 /* RealmService.swift */,
+				C306502921E796B300EDD98D /* NetworkService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		C306502C21EAB9BA00EDD98D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C306502D21EAB9D700EDD98D /* Books.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C306502F21EAC8FA00EDD98D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C306503021EAC90B00EDD98D /* BooksViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C306502221E7962A00EDD98D /* LaunchScreen.storyboard in Resources */,
+				C3BA592A21ED8E0F00A828A9 /* BookCollectionViewCell.xib in Resources */,
 				C306501F21E7962900EDD98D /* Assets.xcassets in Resources */,
 				C306501D21E7962900EDD98D /* Main.storyboard in Resources */,
 			);
@@ -137,8 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C306501A21E7962900EDD98D /* ViewController.swift in Sources */,
+				C306502E21EAB9D700EDD98D /* Books.swift in Sources */,
+				C3016E1921FD19FA00D833A2 /* FavoritesViewController.swift in Sources */,
+				C306501A21E7962900EDD98D /* BooksViewController.swift in Sources */,
+				C306502A21E796B300EDD98D /* NetworkService.swift in Sources */,
+				C3BA592921ED8E0F00A828A9 /* BookCollectionViewCell.swift in Sources */,
+				C306503121EAC90B00EDD98D /* BooksViewModel.swift in Sources */,
 				C306501821E7962900EDD98D /* AppDelegate.swift in Sources */,
+				C38FE93421F187C6005C97E6 /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +362,7 @@
 				C306502821E7962A00EDD98D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

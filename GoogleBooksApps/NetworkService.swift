@@ -1,3 +1,4 @@
+
 //
 //  NetworkService.swift
 //  GoogleBooksApps
@@ -7,3 +8,33 @@
 //
 
 import Foundation
+import Alamofire
+import Unbox
+
+
+//MARK: SERVICE
+class NetworkService {
+    
+    private let baseURL = "https://www.googleapis.com/books/v1/volumes?q="
+    
+    typealias CompletionHandler = ([Book]) -> ()
+    
+    func searchNetwork(for text: String, completion: @escaping CompletionHandler) {
+        
+        //let url = baseURL + text or \(baseURL)\(text)
+        let url = baseURL + text
+        Alamofire.request(url).responseJSON() { response in
+            guard let value = response.result.value
+                else {
+                    completion([])
+                    return
+            }
+            
+            let dict = value as! [String: Any]
+            
+            guard let books : [Book] = try? unbox(dictionary: dict, atKey:"items")
+                else { return }
+            completion(books)
+        }
+    }
+}

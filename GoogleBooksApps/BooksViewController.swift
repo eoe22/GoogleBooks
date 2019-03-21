@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
+class BooksViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: UISearchBarDelegate {
+extension BooksViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
@@ -63,8 +63,6 @@ extension ViewController: UISearchBarDelegate {
         
         self.title = "Search for \"" + query + "\""
         self.view.endEditing(true)
-        
-        //vm.search(for: query)
         
         service.searchNetwork(for: query) { books in
             self.books = books
@@ -81,18 +79,7 @@ extension ViewController: UISearchBarDelegate {
     }
 }
 
-/** EASY 1 TAP ON COLLECTION VIEW
-extension ViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let book = books[indexPath.row]
-        
-        print(book)
-    }
-}
-*/
-
-extension ViewController: UICollectionViewDataSource {
+extension BooksViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -109,25 +96,16 @@ extension ViewController: UICollectionViewDataSource {
         
         cell.configure(with: book)
         
-        /*
-                cell.titleLabel.text = self.books[indexPath.row].title
-                cell.publisherLabel.text = self.books[indexPath.row].publisher ?? "Not Available"
-                cell.authorLabel.text = self.books[indexPath.row].author?.first ?? "Not Available"
-                let data = Data(referencing: self.books[indexPath.row].thumbnail)
-                cell.imageView.image = nil
-        */
-        
         return cell
     }
 }
 
-extension ViewController: UICollectionViewDelegateFlowLayout {
+extension BooksViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = self.collectionView.frame.size.width
-        // let screenHeight = self.collectionView.frame.size.height
         
         return CGSize(width: screenWidth/3.0,
                       height: screenWidth/3.0)
