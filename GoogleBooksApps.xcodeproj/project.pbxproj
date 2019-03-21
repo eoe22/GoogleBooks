@@ -17,6 +17,7 @@
 		C306502E21EAB9D700EDD98D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306502D21EAB9D700EDD98D /* Book.swift */; };
 		C306503121EAC90B00EDD98D /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306503021EAC90B00EDD98D /* BooksViewModel.swift */; };
 		C31EADAD22432BBB006F441E /* BookCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31EADAC22432BBB006F441E /* BookCollectionViewCellViewModel.swift */; };
+		C31EADAF2243F3D9006F441E /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31EADAE2243F3D9006F441E /* FavoritesViewModel.swift */; };
 		C38FE93421F187C6005C97E6 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FE93321F187C6005C97E6 /* RealmService.swift */; };
 		C3BA592921ED8E0F00A828A9 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA592721ED8E0F00A828A9 /* BookCollectionViewCell.swift */; };
 		C3BA592A21ED8E0F00A828A9 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BA592821ED8E0F00A828A9 /* BookCollectionViewCell.xib */; };
@@ -35,6 +36,7 @@
 		C306502D21EAB9D700EDD98D /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		C306503021EAC90B00EDD98D /* BooksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		C31EADAC22432BBB006F441E /* BookCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		C31EADAE2243F3D9006F441E /* FavoritesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		C38FE93321F187C6005C97E6 /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		C3BA592721ED8E0F00A828A9 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3BA592821ED8E0F00A828A9 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				C306503021EAC90B00EDD98D /* BooksViewModel.swift */,
+				C31EADAE2243F3D9006F441E /* FavoritesViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C31EADAF2243F3D9006F441E /* FavoritesViewModel.swift in Sources */,
 				C306502E21EAB9D700EDD98D /* Book.swift in Sources */,
 				C31EADAD22432BBB006F441E /* BookCollectionViewCellViewModel.swift in Sources */,
 				C3016E1921FD19FA00D833A2 /* FavoritesViewController.swift in Sources */,

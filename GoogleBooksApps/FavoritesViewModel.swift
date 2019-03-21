@@ -1,19 +1,17 @@
 //
-//  BooksViewModel.swift
+//  FavoritesViewModel.swift
 //  GoogleBooksApps
 //
-//  Created by C2QJG01SDRJD on 1/12/19.
+//  Created by C2QJG01SDRJD on 3/21/19.
 //  Copyright © 2019 C2QJG01SDRJD. All rights reserved.
 //
 
 import Foundation
-import RxSwift
-import RxCocoa
 
-class BooksViewModel{
+class FavoritesViewModel {
     
     var books: [Book] = []
-    let service = NetworkService()
+    let realmService = RealmService()
     var dataLoadedCallback: (() -> ())?
     
     var numberOfRows: Int {
@@ -27,7 +25,7 @@ class BooksViewModel{
     }
     
     func fetchBooks(for text: String) {
-        service.searchNetwork(for: text) { [weak self] books in
+        realmService.getRepository() { [weak self] books in
             self?.books = books
             self?.dataLoadedCallback?()
         }

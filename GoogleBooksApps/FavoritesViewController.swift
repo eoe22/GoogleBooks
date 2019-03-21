@@ -78,8 +78,9 @@ extension FavoritesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! BookCollectionViewCell
         
-        let book = books[indexPath.row]
-        cell.configure(with: book)
+        //Make VM
+//        let book = books[indexPath.row]
+//        cell.configure(with: book)
         
         return cell
     }

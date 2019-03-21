@@ -20,7 +20,7 @@ class BookCollectionViewCell: UICollectionViewCell {
         titleLabel.text = viewModel.title
         publisherLabel.text = viewModel.publisher
         authorLabel.text = viewModel.author
-        imageView.image = viewModel.thumbnail.image
+//        imageView.image = viewModel.thumbnail.image
     }
     
     override func awakeFromNib() {

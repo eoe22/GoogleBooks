@@ -12,6 +12,5 @@ target 'GoogleBooksApps' do
 	pod 'RxSwift', '3.0'
 	pod 'RxCocoa', '3.0'
 	pod 'SDWebImage'
-	pod 'SwiftLint', '0.25.1'
  
 end

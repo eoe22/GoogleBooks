@@ -24,15 +24,15 @@ struct BookCollectionViewCellViewModel {
         return book.author?.joined(separator: ", ") ?? "Author Not Available"
     }
     
-    var thumbnail: UIImageView {
-        let url = book.thumbnail?.replacingOccurrences(of: "http", with: "https")
-        
-        if (book.thumbnail == nil){
-            self.thumbnail.image = #imageLiteral(resourceName: "No_Image_Available")
-        }
-        else{
-            self.thumbnail.sd_setImage(with: URL(string: url!), placeholderImage: nil)
-        }
-        return self.thumbnail
-    }
+//    var thumbnail: UIImageView {
+//        let url = book.thumbnail?.replacingOccurrences(of: "http", with: "https")
+//        
+//        if (book.thumbnail == nil){
+//            self.thumbnail.image = #imageLiteral(resourceName: "No_Image_Available")
+//        }
+//        else{
+//            self.thumbnail.sd_setImage(with: URL(string: url!), placeholderImage: nil)
+//        }
+//        return self.thumbnail
+//    }
 }

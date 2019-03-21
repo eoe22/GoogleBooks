@@ -17,19 +17,22 @@ class BooksViewController: UIViewController {
     
     let cellIdentifier = "bookCell"
     
-    var books: [Book] = []
+//    var books: [Book] = []
     
     let vm = BooksViewModel()
     
-    let service = NetworkService()
+//    let service = NetworkService()
     let realmService = RealmService()
-    
-    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupCollectionView()
+        vm.dataLoadedCallback = { [weak self] in
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
         
         searchBar.delegate = self
     }
@@ -49,7 +52,7 @@ class BooksViewController: UIViewController {
         guard let indexPath: IndexPath = self.collectionView.indexPathForItem(at: collectionViewCell)
             else { return }
         
-        let book = self.books[indexPath.row]
+        let book = vm.books[indexPath.row]
         realmService.makeFavorite(book: book)
     }
 }
@@ -63,6 +66,8 @@ extension BooksViewController: UISearchBarDelegate {
         
         self.title = "Search for \"" + query + "\""
         self.view.endEditing(true)
+        
+        vm.fetchBooks(for: query)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -77,15 +82,15 @@ extension BooksViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.books.count
+        return vm.numberOfRows
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! BookCollectionViewCell
         
-        let book = books[indexPath.row]
-        
-        cell.configure(with: book)
+//        let book = books[indexPath.row]
+//        cell.configure(with: book))
+        cell.configure(with: vm.modelForCell(at: indexPath))
         
         return cell
     }
