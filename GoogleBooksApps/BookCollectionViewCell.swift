@@ -21,6 +21,12 @@ class BookCollectionViewCell: UICollectionViewCell {
         publisherLabel.text = viewModel.publisher
         authorLabel.text = viewModel.author
 //        imageView.image = viewModel.thumbnail.image
+        if let imageURL = viewModel.url {
+            imageView.sd_setImage(with: imageURL, completed: nil)
+        }
+        else {
+            // placeholder image
+        }
     }
     
     override func awakeFromNib() {

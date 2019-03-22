@@ -16,12 +16,7 @@ class BooksViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let cellIdentifier = "bookCell"
-    
-//    var books: [Book] = []
-    
     let vm = BooksViewModel()
-    
-//    let service = NetworkService()
     let realmService = RealmService()
     
     override func viewDidLoad() {
@@ -53,7 +48,7 @@ class BooksViewController: UIViewController {
             else { return }
         
         let book = vm.books[indexPath.row]
-        realmService.makeFavorite(book: book)
+        vm.favorite(book: book)
     }
 }
 
@@ -78,7 +73,7 @@ extension BooksViewController: UISearchBarDelegate {
 extension BooksViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return vm.numberOfSections
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -88,8 +83,6 @@ extension BooksViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! BookCollectionViewCell
         
-//        let book = books[indexPath.row]
-//        cell.configure(with: book))
         cell.configure(with: vm.modelForCell(at: indexPath))
         
         return cell

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SDWebImage
 
 struct BookCollectionViewCellViewModel {
     let book: Book
@@ -24,8 +23,14 @@ struct BookCollectionViewCellViewModel {
         return book.author?.joined(separator: ", ") ?? "Author Not Available"
     }
     
-//    var thumbnail: UIImageView {
-//        let url = book.thumbnail?.replacingOccurrences(of: "http", with: "https")
+    var url: URL? {
+        guard let thumbnail = book.thumbnail else { return nil }
+        let url = thumbnail.replacingOccurrences(of: "http", with: "https")
+        return URL(string: url)
+    }
+    
+    //    var thumbnail: UIImageView {
+    //        let url = book.thumbnail?.replacingOccurrences(of: "http", with: "https")
 //        
 //        if (book.thumbnail == nil){
 //            self.thumbnail.image = #imageLiteral(resourceName: "No_Image_Available")
