@@ -13,6 +13,7 @@ class FavoritesViewModel {
     var books: [Book] = []
     let realmService = RealmService()
     var dataLoadedCallback: (() -> ())?
+    var numberOfSections: Int = 1
     
     var numberOfRows: Int {
         return books.count
@@ -20,14 +21,20 @@ class FavoritesViewModel {
     
     init() {}
     
-    func modelForCell(at indexPath: IndexPath) -> BookCollectionViewCellViewModel {
+    func modelForCellFave(at indexPath: IndexPath) -> BookCollectionViewCellViewModel {
         return BookCollectionViewCellViewModel(book: books[indexPath.row])
     }
     
-    func fetchBooks(for text: String) {
+    func fetchRealmBooks() {
         realmService.getRepository() { [weak self] books in
             self?.books = books
             self?.dataLoadedCallback?()
+        }
+    }
+    
+    func callRemove(book: Book) {
+        realmService.removeBook(book: book) {
+            self.fetchRealmBooks()
         }
     }
 }

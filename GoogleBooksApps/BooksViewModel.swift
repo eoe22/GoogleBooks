@@ -14,7 +14,9 @@ class BooksViewModel{
     
     var books: [Book] = []
     let service = NetworkService()
+    let realmService = RealmService()
     var dataLoadedCallback: (() -> ())?
+    var numberOfSections: Int = 1
     
     var numberOfRows: Int {
         return books.count
@@ -31,5 +33,9 @@ class BooksViewModel{
             self?.books = books
             self?.dataLoadedCallback?()
         }
+    }
+    
+    func favorite(book: Book) {
+        realmService.makeFavorite(book: book)
     }
 }

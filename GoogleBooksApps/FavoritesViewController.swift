@@ -15,32 +15,22 @@ class FavoritesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let cellIdentifier = "bookCell"
+    let vm = FavoritesViewModel()
     let realmService = RealmService()
-    
-    var books: [Book] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCollectionView()
+         vm.dataLoadedCallback = { [weak self] in
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        getBooks()
-//        realmService.deleteAll()
-    }
-    
-    func getBooks() {
-        realmService.getRepository() { books in
-            self.books = books
-            print(books)
-            
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
+        vm.fetchRealmBooks()
     }
     
     func setupCollectionView() {
@@ -58,29 +48,25 @@ class FavoritesViewController: UIViewController {
         guard let indexPath: IndexPath = self.collectionView.indexPathForItem(at: collectionViewCell)
             else { return }
         
-        let book = self.books[indexPath.row]
-        realmService.removeBook(book: book){ x in
-            self.getBooks()
-        }
+        let book = vm.books[indexPath.row]
+        vm.callRemove(book: book)
     }
 }
 
 extension FavoritesViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return vm.numberOfSections
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.books.count
+        return vm.numberOfRows
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! BookCollectionViewCell
         
-        //Make VM
-//        let book = books[indexPath.row]
-//        cell.configure(with: book)
+        cell.configure(with: vm.modelForCellFave(at: indexPath))
         
         return cell
     }
