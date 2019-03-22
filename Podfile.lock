@@ -1,25 +1,27 @@
 PODS:
   - Alamofire (4.4.0)
-  - Realm (2.10.2):
-    - Realm/Headers (= 2.10.2)
-  - Realm/Headers (2.10.2)
-  - RealmSwift (2.10.2):
-    - Realm (= 2.10.2)
+  - Realm (3.0.2):
+    - Realm/Headers (= 3.0.2)
+  - Realm/Headers (3.0.2)
+  - RealmSwift (3.0.2):
+    - Realm (= 3.0.2)
   - RxCocoa (3.0.0):
     - RxSwift (~> 3.0)
   - RxSwift (3.0.0)
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
-  - Unbox (3.0.0)
+  - SwiftLint (0.25.1)
+  - Unbox (2.5.0)
 
 DEPENDENCIES:
   - Alamofire (< 4.5)
-  - RealmSwift (< 3.0)
+  - RealmSwift (< 3.1.0)
   - RxCocoa (= 3.0)
   - RxSwift (= 3.0)
   - SDWebImage
-  - Unbox (< 4.0)
+  - SwiftLint (= 0.25.1)
+  - Unbox (< 3.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -29,17 +31,19 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - SDWebImage
+    - SwiftLint
     - Unbox
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
-  RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
+  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
+  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
   RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
-  Unbox: 9ed33b2a31f7a8a049f54b94d40c4a52a28c4d9d
+  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
+  Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
 
-PODFILE CHECKSUM: 62e1dd741bce372de3576c3139d5378fc42cff85
+PODFILE CHECKSUM: 085eca85bb67c7151df5cb0eeeaacbafd6b0116d
 
 COCOAPODS: 1.5.3
